@@ -1,0 +1,49 @@
+.submenuColor {
+    background: #fff !important;
+}
+
+.sidebarActiveColor {
+    background: #5c25cb !important;
+    color: #fff !important;
+}
+
+.sidebarActiveColor:not(.nohover):hover {
+    background: #fff !important;
+    color: #5c25cb !important;
+}
+
+.sidebarInactiveColor {
+    background: #fff !important;
+    color: #5c25cb !important;
+}
+
+.sidebarInactiveColor:not(.nohover):hover {
+    background: #5c25cb !important;
+    color: #fff !important;
+}
+
+.iconActiveColor {
+    color: #fff !important;
+}
+
+/* .nowrapping {
+    display: flex;
+    white-space: nowrap;
+} */
+
+.left {
+    display: inline-flex;
+    float: left;
+}
+.right {
+    float: right;
+}
+
+.loaderAjax {
+    display: none;
+}
+
+.radioCustom {
+    display: inline-block !important;
+    margin-right: 25px !important;
+}

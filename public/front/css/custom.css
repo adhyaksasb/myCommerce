@@ -1,0 +1,369 @@
+.hidden {
+    display: none;
+}
+
+.right {
+    float: right;
+}
+
+.mt-15 {
+    margin-top: 15px;
+}
+
+.br-10 {
+    border-radius: 10px;
+}
+
+.loader {
+    background: rgba(255, 255, 255, 0.8);
+    display: none;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+}
+
+.loader img {
+    top: 25rem;
+    left: 53rem;
+    position: relative;
+}
+
+.otp-verify {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    flex-direction: column;
+    height: 50vh;
+    background-color: #fff;
+    color: #1c1c1b;
+}
+
+.otp-container {
+    background-color: rgba(114, 110, 110, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.otp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.otp input {
+    width: 60px;
+    font-size: 24px;
+    margin: 2px;
+    padding: 10px;
+    background: none;
+    outline: none;
+    border: 2px solid #27212d;
+    border-radius: 5px;
+    text-align: center;
+    color: #1c1c1b;
+    transition: all 0.3s ease;
+}
+
+.otp input:focus {
+    border: 2px solid #5c25cb;
+    box-shadow: 0 0 4px 4px #a527ff61;
+}
+
+.verify-otp {
+    padding: 15px 55px;
+    background-color: #5c25cb;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-bottom: 30px;
+}
+.verify-otp:active {
+    transform: scale(0.9);
+}
+
+.dangerButton {
+    background-color: red !important;
+    color: white !important;
+    border: 1px solid red !important;
+}
+
+.dangerButton:hover {
+    background-color: darkred !important;
+    border: 1px solid darkred !important;
+}
+
+.grandTotal {
+    font-weight: 600;
+}
+
+.address-list {
+    display: block;
+    border: 1px solid rgba(114, 110, 110, 0.3);
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.address-list > input {
+    /* HIDE RADIO */
+    visibility: hidden; /* Makes input not-clickable */
+    position: absolute; /* Remove input from document flow */
+}
+.address-list > input + div {
+    /* DIV STYLES */
+    cursor: pointer;
+    border: 2px solid transparent;
+    padding: 15px 10px 0px 25px;
+}
+.address-list > input:checked + div {
+    /* (RADIO CHECKED) DIV STYLES */
+    background-color: #a8e99e;
+    border: 1px solid #13e721;
+    border-radius: 10px;
+}
+
+.address-list p {
+    font-weight: 100;
+    color: rgba(114, 110, 110, 0.8);
+}
+
+.address-list .address-selected {
+    position: relative;
+    top: -90px;
+    left: -20px;
+    color: #07500c;
+    font-size: 30px;
+    float: right;
+    display: none;
+}
+
+.address-list > input:checked + div .address-selected {
+    display: block;
+}
+
+.address-name {
+    font-weight: 600;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: black;
+    margin: 20px 0 20px 0;
+}
+
+.separator::before,
+.separator::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #000;
+}
+
+.separator:not(:empty)::before {
+    margin-right: 0.25em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: 0.25em;
+}
+
+.alignCenter {
+    margin: 0 auto 25px auto !important;
+    display: block !important;
+}
+
+.setting-tabs nav {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+.setting-tabs nav label {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    color: #5c25cb;
+    font-size: 17px;
+    border-radius: 10px 10px 0px 0px;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+.setting-tabs nav label:hover {
+    background: rgba(141, 23, 184, 0.3);
+}
+#details:checked ~ nav label.details,
+#security:checked ~ nav label.security,
+#address:checked ~ nav label.address,
+#bank:checked ~ nav label.bank,
+#notification:checked ~ nav label.notification {
+    color: #fff;
+}
+.setting-tabs nav label i {
+    padding-right: 7px;
+}
+.setting-tabs nav .slider {
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+    border-radius: 10px 10px 0px 0px;
+    background: #5c25cb;
+    transition: all 0.3s ease;
+}
+.setting-tabs input[type="radio"] {
+    display: none;
+}
+#security:checked ~ nav .slider {
+    left: 20%;
+}
+#address:checked ~ nav .slider {
+    left: 40%;
+}
+#bank:checked ~ nav .slider {
+    left: 60%;
+}
+#notification:checked ~ nav .slider {
+    left: 80%;
+}
+.setting-tabs section .content {
+    display: none;
+    background: #fff;
+    padding: 35px 0px 35px 0px;
+    border: 1px solid rgba(114, 110, 110, 0.5);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 0 0 10px 10px;
+}
+#details:checked ~ section .content-1,
+#security:checked ~ section .content-2,
+#address:checked ~ section .content-3,
+#bank:checked ~ section .content-4,
+#notification:checked ~ section .content-5 {
+    display: block;
+}
+
+.address-wrapper {
+    max-width: 1050px;
+    margin: auto;
+}
+
+.address-wrapper:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    margin-left: -1px;
+    height: 100%;
+}
+
+/*--------------------------------------------------------------
+0.1 Modals
+--------------------------------------------------------------*/
+.modals {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border-radius: 10px;
+    z-index: 99999;
+    background-color: white;
+    width: 900px;
+    max-width: 80%;
+}
+
+.modals.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.modal-header .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+}
+
+.modal-header .close-button {
+    cursor: pointer;
+    font-size: 1.5em;
+    margin-left: 15px;
+}
+
+.modal-body {
+    padding: 15px 20px;
+    overflow: auto;
+    max-height: 700px;
+    margin-bottom: 35px;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+    z-index: 9999;
+}
+
+/* Tablets */
+@media (max-width: 1020px) {
+    .loader img {
+        top: 18rem;
+        left: 25rem;
+        position: relative;
+    }
+
+    .tabs-title {
+        display: none;
+    }
+
+    .address-wrapper {
+        padding: 30px 30px 30px 30px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+    .loader img {
+        top: 16rem;
+        left: 9rem;
+        position: relative;
+    }
+
+    .tabs-title {
+        display: none;
+    }
+}
